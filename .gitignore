@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.DS_Store
+*.log
+
+# Streamlit / secrets
+.streamlit/secrets.toml
+.env
+.env.*
+
+# Runtime-generated telemetry and work-order sessions
+outputs/telemetry/
+outputs/work_orders/

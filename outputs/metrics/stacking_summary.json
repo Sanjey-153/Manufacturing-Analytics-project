@@ -1,0 +1,146 @@
+{
+    "ensemble_architecture": {
+        "base_models": [
+            "decision_tree",
+            "random_forest",
+            "xgboost",
+            "lightgbm"
+        ],
+        "meta_learner": "LogisticRegression",
+        "cv_strategy": "StratifiedKFold",
+        "n_splits": 5,
+        "random_state": 42,
+        "stack_method": "predict_proba",
+        "passthrough": false,
+        "meta_learner_weights": {
+            "decision_tree": 0.0931,
+            "random_forest": 3.7255,
+            "xgboost": 2.3489,
+            "lightgbm": 4.3258
+        }
+    },
+    "training_data": {
+        "samples": 15458,
+        "features": 8,
+        "feature_names": [
+            "Type_H",
+            "Type_L",
+            "Type_M",
+            "Air temperature (K)",
+            "Process temperature (K)",
+            "Rotational speed (rpm)",
+            "Torque (Nm)",
+            "Tool wear (min)"
+        ]
+    },
+    "test_evaluation": {
+        "test_samples": 2000,
+        "test_failures": 68,
+        "metrics": {
+            "accuracy": 0.9695,
+            "precision": 0.5361,
+            "recall": 0.7647,
+            "f1_score": 0.6303,
+            "roc_auc": 0.9712,
+            "pr_auc": 0.7247,
+            "tn": 1887,
+            "fp": 45,
+            "fn": 16,
+            "tp": 52
+        }
+    },
+    "comparison_vs_lightgbm": {
+        "Recall": {
+            "LightGBM": 0.8088,
+            "Stacking": 0.7647,
+            "Delta": -0.0441
+        },
+        "F1-Score": {
+            "LightGBM": 0.6433,
+            "Stacking": 0.6303,
+            "Delta": -0.013
+        },
+        "False_Negatives": {
+            "LightGBM": 13,
+            "Stacking": 16,
+            "Delta": 3
+        },
+        "Precision": {
+            "LightGBM": 0.534,
+            "Stacking": 0.5361,
+            "Delta": 0.0021
+        },
+        "PR-AUC": {
+            "LightGBM": 0.7963,
+            "Stacking": 0.7247,
+            "Delta": -0.0716
+        }
+    },
+    "all_models_performance": [
+        {
+            "Model": "Decision Tree",
+            "Accuracy": 0.9515,
+            "Precision": 0.3782,
+            "Recall": 0.6618,
+            "F1-Score": 0.4813,
+            "ROC-AUC": 0.8292,
+            "PR-AUC": 0.3874,
+            "True Negative": 1858,
+            "False Positive": 74,
+            "False Negative": 23,
+            "True Positive": 45
+        },
+        {
+            "Model": "Random Forest",
+            "Accuracy": 0.9535,
+            "Precision": 0.3913,
+            "Recall": 0.6618,
+            "F1-Score": 0.4918,
+            "ROC-AUC": 0.9596,
+            "PR-AUC": 0.581,
+            "True Negative": 1862,
+            "False Positive": 70,
+            "False Negative": 23,
+            "True Positive": 45
+        },
+        {
+            "Model": "XGBoost",
+            "Accuracy": 0.9675,
+            "Precision": 0.5143,
+            "Recall": 0.7941,
+            "F1-Score": 0.6243,
+            "ROC-AUC": 0.9723,
+            "PR-AUC": 0.7751,
+            "True Negative": 1881,
+            "False Positive": 51,
+            "False Negative": 14,
+            "True Positive": 54
+        },
+        {
+            "Model": "LightGBM",
+            "Accuracy": 0.9695,
+            "Precision": 0.534,
+            "Recall": 0.8088,
+            "F1-Score": 0.6433,
+            "ROC-AUC": 0.9726,
+            "PR-AUC": 0.7963,
+            "True Negative": 1884,
+            "False Positive": 48,
+            "False Negative": 13,
+            "True Positive": 55
+        },
+        {
+            "Model": "Stacking Ensemble",
+            "Accuracy": 0.9695,
+            "Precision": 0.5361,
+            "Recall": 0.7647,
+            "F1-Score": 0.6303,
+            "ROC-AUC": 0.9712,
+            "PR-AUC": 0.7247,
+            "True Negative": 1887,
+            "False Positive": 45,
+            "False Negative": 16,
+            "True Positive": 52
+        }
+    ]
+}

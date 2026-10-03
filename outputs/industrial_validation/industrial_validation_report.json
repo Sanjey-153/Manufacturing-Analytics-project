@@ -1,0 +1,21 @@
+{
+  "evaluation_status": "COMPLETED",
+  "source_tag": "INDUSTRIAL",
+  "total_records": 50,
+  "operational_threshold": 0.5,
+  "metrics": {
+    "Accuracy": 0.86,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "F1": 0.0,
+    "Specificity": 1.0,
+    "Alert_Rate": 0.0,
+    "Confusion_Matrix": {
+      "TP": 0,
+      "TN": 43,
+      "FP": 0,
+      "FN": 7
+    }
+  },
+  "disclaimer": "Empirical results evaluated on external dataset. Model weights and preprocessor were preserved without retraining."
+}

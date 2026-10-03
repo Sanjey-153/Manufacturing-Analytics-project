@@ -1,0 +1,11 @@
+Metric,Value
+Accuracy,0.86
+Precision,0.0
+Recall,0.0
+F1,0.0
+Specificity,1.0
+Alert_Rate,0.0
+Count_TP,0.0
+Count_TN,43.0
+Count_FP,0.0
+Count_FN,7.0

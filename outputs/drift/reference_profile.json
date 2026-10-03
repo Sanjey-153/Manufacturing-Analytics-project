@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "project": "AI-Based Predictive Maintenance System for CNC Machines",
+    "reference_dataset": "AI4I 2020",
+    "reference_split": "validated stratified training partition",
+    "random_state": 42,
+    "reference_rows": 8000,
+    "reference_sample_size": 8000,
+    "healthy_rows": 7729,
+    "failure_rows": 271,
+    "generated_at": "2026-10-03 18:56:33",
+    "is_fixed_reference": true
+  },
+  "features": {
+    "Type": {
+      "feature_name": "Type",
+      "display_name": "Machine Type",
+      "type": "categorical",
+      "unit": "Category (H/M/L)",
+      "sample_count": 8000,
+      "categories": [
+        "H",
+        "M",
+        "L"
+      ],
+      "category_counts": {
+        "L": 4830,
+        "M": 2381,
+        "H": 789
+      },
+      "category_proportions": {
+        "L": 0.6038,
+        "M": 0.2976,
+        "H": 0.0986
+      }
+    },
+    "Air temperature [K]": {
+      "feature_name": "Air temperature [K]",
+      "display_name": "Air Temperature",
+      "type": "numerical",
+      "unit": "K",
+      "sample_count": 8000,
+      "mean": 300.0054,
+      "std": 1.9967,
+      "median": 300.1,
+      "min": 295.3,
+      "max": 304.5,
+      "p25": 298.3,
+      "p75": 301.5,
+      "bin_edges": [
+        295.3,
+        297.4,
+        298.1,
+        298.7,
+        299.2,
+        300.1,
+        300.6,
+        301.1,
+        301.9,
+        302.7,
+        304.5
+      ]
+    },
+    "Process temperature [K]": {
+      "feature_name": "Process temperature [K]",
+      "display_name": "Process Temperature",
+      "type": "numerical",
+      "unit": "K",
+      "sample_count": 8000,
+      "mean": 310.0061,
+      "std": 1.4793,
+      "median": 310.1,
+      "min": 305.7,
+      "max": 313.8,
+      "p25": 308.8,
+      "p75": 311.1,
+      "bin_edges": [
+        305.7,
+        308.1,
+        308.6,
+        309.1,
+        309.6,
+        310.1,
+        310.5,
+        310.9,
+        311.3,
+        311.9,
+        313.8
+      ]
+    },
+    "Rotational speed [rpm]": {
+      "feature_name": "Rotational speed [rpm]",
+      "display_name": "Rotational Speed",
+      "type": "numerical",
+      "unit": "rpm",
+      "sample_count": 8000,
+      "mean": 1539.3569,
+      "std": 180.9716,
+      "median": 1503.0,
+      "min": 1168.0,
+      "max": 2886.0,
+      "p25": 1422.0,
+      "p75": 1613.0,
+      "bin_edges": [
+        1168.0,
+        1364.0,
+        1404.8,
+        1438.0,
+        1469.0,
+        1503.0,
+        1541.0,
+        1586.0,
+        1645.0,
+        1744.0,
+        2886.0
+      ]
+    },
+    "Torque [Nm]": {
+      "feature_name": "Torque [Nm]",
+      "display_name": "Spindle Torque",
+      "type": "numerical",
+      "unit": "Nm",
+      "sample_count": 8000,
+      "mean": 40.0034,
+      "std": 10.0189,
+      "median": 40.1,
+      "min": 3.8,
+      "max": 76.6,
+      "p25": 33.2,
+      "p75": 46.8,
+      "bin_edges": [
+        3.8,
+        27.3,
+        31.5,
+        34.7,
+        37.5,
+        40.1,
+        42.7,
+        45.4,
+        48.4,
+        52.6,
+        76.6
+      ]
+    },
+    "Tool wear [min]": {
+      "feature_name": "Tool wear [min]",
+      "display_name": "Tool Wear Duration",
+      "type": "numerical",
+      "unit": "min",
+      "sample_count": 8000,
+      "mean": 107.685,
+      "std": 63.608,
+      "median": 107.0,
+      "min": 0.0,
+      "max": 253.0,
+      "p25": 53.0,
+      "p75": 163.0,
+      "bin_edges": [
+        0.0,
+        20.0,
+        42.0,
+        63.0,
+        86.0,
+        107.0,
+        129.0,
+        151.0,
+        174.0,
+        195.0,
+        253.0
+      ]
+    }
+  },
+  "model_output": {
+    "feature_name": "failure_probability",
+    "display_name": "Model Output Failure Probability",
+    "type": "probability",
+    "unit": "Probability [0, 1]",
+    "sample_count": 8000,
+    "mean": 0.0586,
+    "std": 0.1839,
+    "median": 0.0041,
+    "min": 0.0002,
+    "max": 0.9997,
+    "bin_edges": [
+      0.0002,
+      0.0011,
+      0.0016,
+      0.0022,
+      0.0029,
+      0.0041,
+      0.0058,
+      0.009,
+      0.0194,
+      0.1043,
+      0.9997
+    ],
+    "risk_tier_distribution": {
+      "Low": {
+        "count": 7417,
+        "proportion": 0.9271
+      },
+      "Moderate": {
+        "count": 238,
+        "proportion": 0.0297
+      },
+      "High": {
+        "count": 99,
+        "proportion": 0.0124
+      },
+      "Critical": {
+        "count": 246,
+        "proportion": 0.0307
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+Feature,Min,Q1 (25%),Median,Q3 (75%),Max,IQR,Lower Bound,Upper Bound,Outlier Count,Outlier %,Failures in Outliers,Failure Rate in Outliers (%)
+Air temperature [K],295.3,298.3,300.1,301.5,304.5,3.2,293.5,306.3,0,0.0,0,0.0
+Process temperature [K],305.7,308.8,310.1,311.1,313.8,2.3,305.35,314.55,0,0.0,0,0.0
+Rotational speed [rpm],1168.0,1423.0,1503.0,1612.0,2886.0,189.0,1139.5,1895.5,418,4.18,35,8.37
+Torque [Nm],3.8,33.2,40.1,46.8,76.6,13.6,12.8,67.2,69,0.69,62,89.86
+Tool wear [min],0.0,53.0,108.0,162.0,253.0,109.0,-110.5,325.5,0,0.0,0,0.0

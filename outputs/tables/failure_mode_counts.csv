@@ -1,0 +1,6 @@
+Failure Mode Code,Description,Occurrence Count,"Prevalence (% of 10,000)",Share of Total Failures (%)
+TWF,Tool Wear Failure,46,0.46,13.57
+HDF,Heat Dissipation Failure,115,1.15,33.92
+PWF,Power Failure,95,0.95,28.02
+OSF,Overstrain Failure,98,0.98,28.91
+RNF,Random Failure,19,0.19,5.6

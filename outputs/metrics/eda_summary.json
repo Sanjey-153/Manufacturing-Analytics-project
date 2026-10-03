@@ -1,0 +1,218 @@
+{
+    "dataset_metadata": {
+        "total_observations": 10000,
+        "total_features": 14,
+        "identifiers": [
+            "UDI",
+            "Product ID"
+        ],
+        "categorical_features": [
+            "Type"
+        ],
+        "numerical_features": [
+            "Air temperature [K]",
+            "Process temperature [K]",
+            "Rotational speed [rpm]",
+            "Torque [Nm]",
+            "Tool wear [min]"
+        ],
+        "target_column": "Machine failure",
+        "failure_mode_flags": [
+            "TWF",
+            "HDF",
+            "PWF",
+            "OSF",
+            "RNF"
+        ]
+    },
+    "target_distribution": {
+        "healthy_count": 9661,
+        "failure_count": 339,
+        "healthy_percentage": 96.61,
+        "failure_percentage": 3.39,
+        "imbalance_ratio": 28.5
+    },
+    "machine_type_distribution": {
+        "type_counts": {
+            "L": 6000,
+            "M": 2997,
+            "H": 1003
+        },
+        "type_percentages": {
+            "L": 60.0,
+            "M": 29.97,
+            "H": 10.03
+        }
+    },
+    "failure_rate_by_machine_type": {
+        "L": {
+            "total": 6000,
+            "failures": 235,
+            "healthy": 5765,
+            "failure_rate_pct": 3.92
+        },
+        "M": {
+            "total": 2997,
+            "failures": 83,
+            "healthy": 2914,
+            "failure_rate_pct": 2.77
+        },
+        "H": {
+            "total": 1003,
+            "failures": 21,
+            "healthy": 982,
+            "failure_rate_pct": 2.09
+        }
+    },
+    "sensor_correlations": {
+        "Air temperature [K]": {
+            "Air temperature [K]": 1.0,
+            "Process temperature [K]": 0.8761,
+            "Rotational speed [rpm]": 0.0227,
+            "Torque [Nm]": -0.0138,
+            "Tool wear [min]": 0.0139
+        },
+        "Process temperature [K]": {
+            "Air temperature [K]": 0.8761,
+            "Process temperature [K]": 1.0,
+            "Rotational speed [rpm]": 0.0193,
+            "Torque [Nm]": -0.0141,
+            "Tool wear [min]": 0.0135
+        },
+        "Rotational speed [rpm]": {
+            "Air temperature [K]": 0.0227,
+            "Process temperature [K]": 0.0193,
+            "Rotational speed [rpm]": 1.0,
+            "Torque [Nm]": -0.875,
+            "Tool wear [min]": 0.0002
+        },
+        "Torque [Nm]": {
+            "Air temperature [K]": -0.0138,
+            "Process temperature [K]": -0.0141,
+            "Rotational speed [rpm]": -0.875,
+            "Torque [Nm]": 1.0,
+            "Tool wear [min]": -0.0031
+        },
+        "Tool wear [min]": {
+            "Air temperature [K]": 0.0139,
+            "Process temperature [K]": 0.0135,
+            "Rotational speed [rpm]": 0.0002,
+            "Torque [Nm]": -0.0031,
+            "Tool wear [min]": 1.0
+        }
+    },
+    "failure_modes_summary": {
+        "failure_mode_counts": {
+            "TWF": 46,
+            "HDF": 115,
+            "PWF": 95,
+            "OSF": 98,
+            "RNF": 19
+        },
+        "failure_mode_percentages": {
+            "TWF": 0.46,
+            "HDF": 1.15,
+            "PWF": 0.95,
+            "OSF": 0.98,
+            "RNF": 0.19
+        },
+        "total_machine_failures": 339,
+        "failures_with_flag": 348,
+        "failures_without_flag": 9,
+        "multi_flag_failures": 24
+    },
+    "outlier_analysis": [
+        {
+            "Feature": "Air temperature [K]",
+            "Min": 295.3,
+            "Q1 (25%)": 298.3,
+            "Median": 300.1,
+            "Q3 (75%)": 301.5,
+            "Max": 304.5,
+            "IQR": 3.2,
+            "Lower Bound": 293.5,
+            "Upper Bound": 306.3,
+            "Outlier Count": 0,
+            "Outlier %": 0.0,
+            "Failures in Outliers": 0,
+            "Failure Rate in Outliers (%)": 0.0
+        },
+        {
+            "Feature": "Process temperature [K]",
+            "Min": 305.7,
+            "Q1 (25%)": 308.8,
+            "Median": 310.1,
+            "Q3 (75%)": 311.1,
+            "Max": 313.8,
+            "IQR": 2.3,
+            "Lower Bound": 305.35,
+            "Upper Bound": 314.55,
+            "Outlier Count": 0,
+            "Outlier %": 0.0,
+            "Failures in Outliers": 0,
+            "Failure Rate in Outliers (%)": 0.0
+        },
+        {
+            "Feature": "Rotational speed [rpm]",
+            "Min": 1168.0,
+            "Q1 (25%)": 1423.0,
+            "Median": 1503.0,
+            "Q3 (75%)": 1612.0,
+            "Max": 2886.0,
+            "IQR": 189.0,
+            "Lower Bound": 1139.5,
+            "Upper Bound": 1895.5,
+            "Outlier Count": 418,
+            "Outlier %": 4.18,
+            "Failures in Outliers": 35,
+            "Failure Rate in Outliers (%)": 8.37
+        },
+        {
+            "Feature": "Torque [Nm]",
+            "Min": 3.8,
+            "Q1 (25%)": 33.2,
+            "Median": 40.1,
+            "Q3 (75%)": 46.8,
+            "Max": 76.6,
+            "IQR": 13.6,
+            "Lower Bound": 12.8,
+            "Upper Bound": 67.2,
+            "Outlier Count": 69,
+            "Outlier %": 0.69,
+            "Failures in Outliers": 62,
+            "Failure Rate in Outliers (%)": 89.86
+        },
+        {
+            "Feature": "Tool wear [min]",
+            "Min": 0.0,
+            "Q1 (25%)": 53.0,
+            "Median": 108.0,
+            "Q3 (75%)": 162.0,
+            "Max": 253.0,
+            "IQR": 109.0,
+            "Lower Bound": -110.5,
+            "Upper Bound": 325.5,
+            "Outlier Count": 0,
+            "Outlier %": 0.0,
+            "Failures in Outliers": 0,
+            "Failure Rate in Outliers (%)": 0.0
+        }
+    ],
+    "generated_figures": [
+        "01_machine_failure_distribution.png",
+        "02_machine_type_distribution.png",
+        "03_sensor_correlation_heatmap.png",
+        "04_failure_mode_distribution.png",
+        "05_sensor_distributions.png",
+        "06_features_by_failure_boxplot.png",
+        "07_machine_type_vs_failure.png",
+        "08_feature_interactions_vs_failure.png"
+    ],
+    "generated_tables": [
+        "eda_descriptive_statistics.csv",
+        "failure_rate_by_machine_type.csv",
+        "feature_summary_by_failure.csv",
+        "failure_mode_counts.csv",
+        "eda_outlier_summary.csv"
+    ]
+}

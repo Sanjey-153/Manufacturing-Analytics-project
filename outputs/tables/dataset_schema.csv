@@ -1,0 +1,15 @@
+Index,Column Name,Data Type,Non-Null Count,Null Count,Unique Values
+0,UDI,int64,10000,0,10000
+1,Product ID,object,10000,0,10000
+2,Type,object,10000,0,3
+3,Air temperature [K],float64,10000,0,93
+4,Process temperature [K],float64,10000,0,82
+5,Rotational speed [rpm],int64,10000,0,941
+6,Torque [Nm],float64,10000,0,577
+7,Tool wear [min],int64,10000,0,246
+8,Machine failure,int64,10000,0,2
+9,TWF,int64,10000,0,2
+10,HDF,int64,10000,0,2
+11,PWF,int64,10000,0,2
+12,OSF,int64,10000,0,2
+13,RNF,int64,10000,0,2

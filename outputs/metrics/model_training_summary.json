@@ -1,0 +1,248 @@
+{
+    "dataset_info": {
+        "training_samples": 15458,
+        "training_features": 8,
+        "feature_list": [
+            "Type_H",
+            "Type_L",
+            "Type_M",
+            "Air temperature (K)",
+            "Process temperature (K)",
+            "Rotational speed (rpm)",
+            "Torque (Nm)",
+            "Tool wear (min)"
+        ],
+        "test_samples": 2000,
+        "test_failures": 68,
+        "test_healthy": 1932,
+        "random_seed": 42
+    },
+    "models": {
+        "Decision Tree": {
+            "model_file": "decision_tree.joblib",
+            "status": "Trained and Evaluated Successfully",
+            "hyperparameters": {
+                "max_depth": "10",
+                "min_samples_leaf": "2",
+                "min_samples_split": "5",
+                "random_state": "42"
+            },
+            "metrics": {
+                "accuracy": 0.9515,
+                "precision": 0.3782,
+                "recall": 0.6618,
+                "f1_score": 0.4813,
+                "roc_auc": 0.8292,
+                "pr_auc": 0.3874,
+                "tn": 1858,
+                "fp": 74,
+                "fn": 23,
+                "tp": 45
+            },
+            "top_features": [
+                {
+                    "Feature": "Rotational speed (rpm)",
+                    "Importance": 0.3419689011018543
+                },
+                {
+                    "Feature": "Torque (Nm)",
+                    "Importance": 0.3167779019578749
+                },
+                {
+                    "Feature": "Tool wear (min)",
+                    "Importance": 0.19901447173531334
+                },
+                {
+                    "Feature": "Type_L",
+                    "Importance": 0.07054903857917498
+                },
+                {
+                    "Feature": "Air temperature (K)",
+                    "Importance": 0.03711884199864133
+                },
+                {
+                    "Feature": "Process temperature (K)",
+                    "Importance": 0.017265598530231085
+                },
+                {
+                    "Feature": "Type_M",
+                    "Importance": 0.01184691963356197
+                },
+                {
+                    "Feature": "Type_H",
+                    "Importance": 0.005458326463348232
+                }
+            ]
+        },
+        "Random Forest": {
+            "model_file": "random_forest.joblib",
+            "status": "Trained and Evaluated Successfully",
+            "hyperparameters": {
+                "max_depth": "12",
+                "min_samples_leaf": "1",
+                "min_samples_split": "2",
+                "n_estimators": "100",
+                "random_state": "42"
+            },
+            "metrics": {
+                "accuracy": 0.9535,
+                "precision": 0.3913,
+                "recall": 0.6618,
+                "f1_score": 0.4918,
+                "roc_auc": 0.9596,
+                "pr_auc": 0.581,
+                "tn": 1862,
+                "fp": 70,
+                "fn": 23,
+                "tp": 45
+            },
+            "top_features": [
+                {
+                    "Feature": "Rotational speed (rpm)",
+                    "Importance": 0.274655989946796
+                },
+                {
+                    "Feature": "Torque (Nm)",
+                    "Importance": 0.25083452472918144
+                },
+                {
+                    "Feature": "Tool wear (min)",
+                    "Importance": 0.18061337415980727
+                },
+                {
+                    "Feature": "Type_L",
+                    "Importance": 0.09838957017998971
+                },
+                {
+                    "Feature": "Type_M",
+                    "Importance": 0.06786631912924677
+                },
+                {
+                    "Feature": "Air temperature (K)",
+                    "Importance": 0.06405587722107478
+                },
+                {
+                    "Feature": "Process temperature (K)",
+                    "Importance": 0.040578879848233544
+                },
+                {
+                    "Feature": "Type_H",
+                    "Importance": 0.023005464785670622
+                }
+            ]
+        },
+        "XGBoost": {
+            "model_file": "xgboost.joblib",
+            "status": "Trained and Evaluated Successfully",
+            "hyperparameters": {
+                "eval_metric": "logloss",
+                "learning_rate": "0.1",
+                "max_depth": "6",
+                "n_estimators": "100",
+                "random_state": "42"
+            },
+            "metrics": {
+                "accuracy": 0.9675,
+                "precision": 0.5143,
+                "recall": 0.7941,
+                "f1_score": 0.6243,
+                "roc_auc": 0.9723,
+                "pr_auc": 0.7751,
+                "tn": 1881,
+                "fp": 51,
+                "fn": 14,
+                "tp": 54
+            },
+            "top_features": [
+                {
+                    "Feature": "Torque (Nm)",
+                    "Importance": 0.21529433131217957
+                },
+                {
+                    "Feature": "Rotational speed (rpm)",
+                    "Importance": 0.20465372502803802
+                },
+                {
+                    "Feature": "Type_L",
+                    "Importance": 0.18854904174804688
+                },
+                {
+                    "Feature": "Tool wear (min)",
+                    "Importance": 0.13978630304336548
+                },
+                {
+                    "Feature": "Type_M",
+                    "Importance": 0.11785520613193512
+                },
+                {
+                    "Feature": "Air temperature (K)",
+                    "Importance": 0.0530245341360569
+                },
+                {
+                    "Feature": "Type_H",
+                    "Importance": 0.05065854266285896
+                },
+                {
+                    "Feature": "Process temperature (K)",
+                    "Importance": 0.030178343877196312
+                }
+            ]
+        },
+        "LightGBM": {
+            "model_file": "lightgbm.joblib",
+            "status": "Trained and Evaluated Successfully",
+            "hyperparameters": {
+                "learning_rate": "0.1",
+                "max_depth": "6",
+                "n_estimators": "100",
+                "random_state": "42"
+            },
+            "metrics": {
+                "accuracy": 0.9695,
+                "precision": 0.534,
+                "recall": 0.8088,
+                "f1_score": 0.6433,
+                "roc_auc": 0.9726,
+                "pr_auc": 0.7963,
+                "tn": 1884,
+                "fp": 48,
+                "fn": 13,
+                "tp": 55
+            },
+            "top_features": [
+                {
+                    "Feature": "Torque (Nm)",
+                    "Importance": 605
+                },
+                {
+                    "Feature": "Tool wear (min)",
+                    "Importance": 580
+                },
+                {
+                    "Feature": "Rotational speed (rpm)",
+                    "Importance": 533
+                },
+                {
+                    "Feature": "Air temperature (K)",
+                    "Importance": 498
+                },
+                {
+                    "Feature": "Process temperature (K)",
+                    "Importance": 457
+                },
+                {
+                    "Feature": "Type_L",
+                    "Importance": 173
+                },
+                {
+                    "Feature": "Type_M",
+                    "Importance": 90
+                },
+                {
+                    "Feature": "Type_H",
+                    "Importance": 57
+                }
+            ]
+        }
+    }
+}

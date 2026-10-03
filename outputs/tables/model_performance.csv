@@ -1,0 +1,5 @@
+Model,Accuracy,Precision,Recall,F1-Score,ROC-AUC,PR-AUC,True Negative,False Positive,False Negative,True Positive
+Decision Tree,0.9515,0.3782,0.6618,0.4813,0.8292,0.3874,1858,74,23,45
+Random Forest,0.9535,0.3913,0.6618,0.4918,0.9596,0.581,1862,70,23,45
+XGBoost,0.9675,0.5143,0.7941,0.6243,0.9723,0.7751,1881,51,14,54
+LightGBM,0.9695,0.534,0.8088,0.6433,0.9726,0.7963,1884,48,13,55

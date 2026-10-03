@@ -1,0 +1,50 @@
+{
+    "dataset_name": "AI4I 2020 Predictive Maintenance Dataset",
+    "n_rows": 10000,
+    "n_cols": 14,
+    "total_missing_values": 0,
+    "duplicate_rows": 0,
+    "type_distribution": {
+        "L": 6000,
+        "M": 2997,
+        "H": 1003
+    },
+    "target_distribution": {
+        "healthy_0_count": 9661,
+        "healthy_0_pct": 96.61,
+        "failed_1_count": 339,
+        "failed_1_pct": 3.39,
+        "imbalance_ratio": 28.5
+    },
+    "failure_mode_breakdown": {
+        "TWF": {
+            "Count": 46,
+            "Percentage_of_Total": 0.46,
+            "Percentage_of_Failures": 13.57
+        },
+        "HDF": {
+            "Count": 115,
+            "Percentage_of_Total": 1.15,
+            "Percentage_of_Failures": 33.92
+        },
+        "PWF": {
+            "Count": 95,
+            "Percentage_of_Total": 0.95,
+            "Percentage_of_Failures": 28.02
+        },
+        "OSF": {
+            "Count": 98,
+            "Percentage_of_Total": 0.98,
+            "Percentage_of_Failures": 28.91
+        },
+        "RNF": {
+            "Count": 19,
+            "Percentage_of_Total": 0.19,
+            "Percentage_of_Failures": 5.6
+        }
+    },
+    "quality_audit": {
+        "passed": true,
+        "notes": "Dataset verified authentic, complete, zero missing values, zero duplicates."
+    }
+}

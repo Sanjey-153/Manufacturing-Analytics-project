@@ -1,0 +1,84 @@
+{
+    "dataset_name": "AI4I 2020 Predictive Maintenance Dataset",
+    "random_state": 42,
+    "raw_total_samples": 10000,
+    "excluded_identifiers": [
+        "UDI",
+        "Product ID"
+    ],
+    "excluded_leakage_columns": [
+        "TWF",
+        "HDF",
+        "PWF",
+        "OSF",
+        "RNF"
+    ],
+    "input_features_raw": [
+        "Type",
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]",
+        "Tool wear [min]"
+    ],
+    "encoded_feature_names": [
+        "Type_H",
+        "Type_L",
+        "Type_M",
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]",
+        "Tool wear [min]"
+    ],
+    "num_input_features": 6,
+    "num_encoded_features": 8,
+    "target_column": "Machine failure",
+    "train_samples": 8000,
+    "test_samples": 2000,
+    "train_healthy_count": 7729,
+    "train_failure_count": 271,
+    "train_failure_percentage": 3.3875,
+    "test_healthy_count": 1932,
+    "test_failure_count": 68,
+    "test_failure_percentage": 3.4,
+    "smote_train_samples": 15458,
+    "smote_train_healthy_count": 7729,
+    "smote_train_failure_count": 7729,
+    "smote_train_failure_percentage": 50.0,
+    "shapes": {
+        "X_train": [
+            8000,
+            8
+        ],
+        "X_test": [
+            2000,
+            8
+        ],
+        "y_train": [
+            8000,
+            1
+        ],
+        "y_test": [
+            2000,
+            1
+        ],
+        "X_train_smote": [
+            15458,
+            8
+        ],
+        "y_train_smote": [
+            15458,
+            1
+        ]
+    },
+    "saved_artifacts": {
+        "X_train": "data\\processed\\X_train.csv",
+        "X_test": "data\\processed\\X_test.csv",
+        "y_train": "data\\processed\\y_train.csv",
+        "y_test": "data\\processed\\y_test.csv",
+        "X_train_smote": "data\\processed\\X_train_smote.csv",
+        "y_train_smote": "data\\processed\\y_train_smote.csv",
+        "preprocessor": "models\\preprocessor.joblib"
+    }
+}

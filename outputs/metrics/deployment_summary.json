@@ -1,0 +1,95 @@
+{
+    "deployment_overview": {
+        "system_name": "AI-Based Predictive Maintenance Decision Support Engine",
+        "primary_production_model": "LightGBM Classifier",
+        "alternative_ensemble_model": "Stacking Classifier (Logistic Regression Meta-Learner)",
+        "model_artifact": "models/lightgbm.joblib",
+        "preprocessor_artifact": "models/preprocessor.joblib",
+        "decision_threshold": 0.5,
+        "inference_engine_module": "src/prediction.py",
+        "recommendation_module": "src/recommendations.py",
+        "cli_prediction_script": "scripts/predict_single.py"
+    },
+    "feature_specification": {
+        "raw_input_features": [
+            "Type",
+            "Air temperature [K]",
+            "Process temperature [K]",
+            "Rotational speed [rpm]",
+            "Torque [Nm]",
+            "Tool wear [min]"
+        ],
+        "excluded_identifiers": [
+            "UDI",
+            "Product ID"
+        ],
+        "excluded_failure_mode_flags": [
+            "TWF",
+            "HDF",
+            "PWF",
+            "OSF",
+            "RNF"
+        ],
+        "encoded_feature_names": [
+            "Type_H",
+            "Type_L",
+            "Type_M",
+            "Air temperature (K)",
+            "Process temperature (K)",
+            "Rotational speed (rpm)",
+            "Torque (Nm)",
+            "Tool wear (min)"
+        ],
+        "encoding_method": {
+            "Type": "OneHotEncoder(handle_unknown='ignore', sparse_output=False)",
+            "numerical_features": "passthrough (original physical units preserved)"
+        }
+    },
+    "primary_model_evaluation": {
+        "model_name": "LightGBM Classifier",
+        "test_set_size": 2000,
+        "test_failures_actual": 68,
+        "test_healthy_actual": 1932,
+        "accuracy": 0.9695,
+        "precision": 0.534,
+        "recall": 0.8088,
+        "f1_score": 0.6433,
+        "roc_auc": 0.9726,
+        "pr_auc": 0.7963,
+        "confusion_matrix": {
+            "true_negatives": 1884,
+            "false_positives": 48,
+            "false_negatives": 13,
+            "true_positives": 55
+        },
+        "false_negative_rate_pct": 19.12,
+        "recall_rank_among_all_models": "1st (Highest Recall = 80.88%)",
+        "f1_rank_among_all_models": "1st (Highest F1-Score = 0.6433)"
+    },
+    "alternative_stacking_evaluation": {
+        "model_name": "Stacking Ensemble (DT + RF + XGB + LGBM -> Logistic Regression)",
+        "accuracy": 0.9695,
+        "precision": 0.5361,
+        "recall": 0.7647,
+        "f1_score": 0.6303,
+        "roc_auc": 0.9712,
+        "pr_auc": 0.7247,
+        "confusion_matrix": {
+            "true_negatives": 1887,
+            "false_positives": 45,
+            "false_negatives": 16,
+            "true_positives": 52
+        }
+    },
+    "risk_classification_tiers": {
+        "Low": "Probability < 0.20 (Standard operational state, routine monitoring)",
+        "Moderate": "0.20 <= Probability < 0.50 (Early degradation indicators, monitor closely)",
+        "High": "0.50 <= Probability < 0.80 (Machine classified as failure risk, scheduled inspection)",
+        "Critical": "Probability >= 0.80 (Severe impending failure, priority inspection alert)"
+    },
+    "integrity_disclaimers": {
+        "hardware_control": "Prototype decision-support system only. Does not control physical CNC machinery.",
+        "certification": "Thresholds and diagnostic rules are heuristic decision-support guidelines, not industry-certified maintenance standards.",
+        "data_source": "Trained and validated on the AI4I 2020 Predictive Maintenance Dataset."
+    }
+}

@@ -1,0 +1,20 @@
+Metric / Attribute,Value
+Raw Dataset Rows,10000
+Raw Dataset Columns,14
+Excluded ID Columns,"UDI, Product ID"
+Excluded Failure Flags (Leakage Prevention),"TWF, HDF, PWF, OSF, RNF"
+Input Features (Raw),"Type, Air temperature [K], Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min]"
+Encoded Features,"Type_H, Type_L, Type_M, Air temperature [K], Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min]"
+Train Sample Count,8000 (80.0%)
+Test Sample Count,2000 (20.0%)
+Train Class Distribution [0 / 1],7729 / 271 (3.39% failures)
+Test Class Distribution [0 / 1],1932 / 68 (3.40% failures)
+Post-SMOTE Train Class Distribution [0 / 1],7729 / 7729 (50.00% failures)
+X_train Shape,"(8000, 8)"
+X_test Shape,"(2000, 8)"
+X_train_smote Shape,"(15458, 8)"
+y_train Shape,"(8000, 1)"
+y_test Shape,"(2000, 1)"
+y_train_smote Shape,"(15458, 1)"
+Preprocessor Path,preprocessor.joblib
+Random Seed,42
